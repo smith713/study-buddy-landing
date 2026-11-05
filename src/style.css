@@ -319,3 +319,227 @@
   .how-section .steps>div>div{max-width:210px;}
   .how-section .steps p{max-width:200px;}
 }
+
+/* Mobile layout update: compact sections and readable two-column cards. */
+@media (max-width:700px){
+  .hero-copy{padding:22px 0 6px;text-align:left;}
+  .hero-copy h1{text-align:left;letter-spacing:-1.6px;}
+  .hero-desc{max-width:none;width:100%;text-align:justify;margin:0;}
+  .hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;justify-content:stretch;margin-top:24px;}
+  .hero-actions .btn{min-width:0;padding:14px 8px;font-size:12px;gap:6px;text-align:center;}
+  .hero-actions .btn svg{flex-shrink:0;width:15px;}
+  .hero-note{justify-content:flex-start;margin-top:22px;line-height:1.6;}
+  .hero-note .avatar-stack{display:none;}
+  .section{padding:42px 0;}
+  .features-section{padding-top:32px;padding-bottom:38px;}
+  .features-section .section-intro,.courses-section .section-intro{margin-bottom:28px;}
+  .features-section .section-intro p,.courses-section .section-intro p{
+    max-width:none;width:100%;margin:0;line-height:1.65;text-align:justify;font-size:17px;
+  }
+  .features-section .section-intro h2,.courses-section .section-intro h2{
+    font-size:clamp(34px,9vw,46px);line-height:1.12;letter-spacing:-1.2px;margin:18px auto;
+  }
+  .courses-section .section-intro h2{max-width:12ch;text-wrap:balance;}
+  .features-section .feature-grid,.courses-section .course-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  .features-section .feature-card{min-width:0;min-height:0;padding:18px 12px;border-radius:17px;}
+  .features-section .feature-card h3{font-size:20px;line-height:1.2;letter-spacing:-.35px;overflow-wrap:normal;text-wrap:balance;margin-bottom:12px;}
+  .features-section .feature-card p{font-size:14px;line-height:1.55;text-align:justify;hyphens:auto;overflow-wrap:break-word;margin-bottom:0;}
+  .features-section .mini-bars{gap:5px;}
+  .features-section .mini-bars i{min-width:0;width:12px;}
+  .features-section .review-tags{gap:5px;}
+  .features-section .review-tags span{padding:5px;font-size:9px;}
+  .courses-section{padding:38px 0;}
+  .courses-section .modern-course{min-width:0;padding:18px 10px 22px;border-radius:17px;}
+  .modern-course .course-top{min-height:76px;}
+  .modern-course .course-info{min-width:0;margin-top:18px;}
+  .modern-course .course-info .course-code{font-size:10px;letter-spacing:.5px;line-height:1.5;overflow-wrap:anywhere;margin-bottom:10px;}
+  .modern-course .course-info h3{font-size:22px;line-height:1.14;letter-spacing:-.4px;overflow-wrap:normal;text-wrap:balance;}
+  .modern-course .course-info p{font-size:14px;line-height:1.45;}
+  .how-section{padding:38px 0 28px;}
+  .how-section .how-right>p{width:100%;max-width:none;margin:18px 0;text-align:justify;}
+  .how-section .steps{width:100%;max-width:none;margin:20px 0 12px;padding:0;}
+  .how-section .steps>div{grid-template-columns:26px minmax(0,1fr);column-gap:8px;padding:16px 0;}
+  .how-section .steps>div>div,.how-section .steps p{width:100%;max-width:none;}
+  .how-section .steps h3{font-size:18px;}
+  .how-section .steps p{font-size:14px;line-height:1.6;}
+  .how-section .steps>div>span{font-size:22px;}
+  .how-section .steps>div:not(:last-child)::after{width:100%;}
+  .how-section .how-right .text-link{margin-top:16px;}
+  .cta-section{padding:24px 0 28px;}
+  .cta-box{padding:10px 0;}
+  footer{padding:24px 0;}
+}
+
+/* Mobile list: numbers at the yellow guide, text wraps at the blue guide. */
+@media (max-width:700px){
+  .how-section .steps{
+    width:calc(100% - 26px);max-width:none;
+    margin-left:26px;margin-right:0;padding:0 40px 0 0;
+  }
+  .how-section .steps>div{
+    grid-template-columns:26px minmax(0,1fr);column-gap:10px;
+  }
+  .how-section .steps>div>div{min-width:0;width:100%;max-width:none;}
+  .how-section .steps h3,.how-section .steps p{
+    max-width:100%;white-space:normal;overflow-wrap:break-word;text-align:left;
+  }
+  .how-section .steps>div:not(:last-child)::after{
+    left:36px;width:calc(100% - 36px);
+  }
+}
+
+/* Consistent section titles and comfortable card copy. */
+:root{--section-title-size:clamp(44px,6.2vw,76px)}
+.hero-copy h1,.features-section .section-intro h2,.courses-section .section-intro h2,.how-section .how-right h2,.cta-box h2{font-size:var(--section-title-size);line-height:1.12;letter-spacing:-2px;text-wrap:balance;overflow-wrap:normal}
+.hero-copy h1 .gradient-text{font-size:1em;white-space:normal}
+.how-section .how-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.how-section .how-right{max-width:none}
+.features-section .feature-card{text-align:left;display:flex;flex-direction:column;min-width:0}
+.features-section .feature-card p{text-align:left;word-spacing:normal;letter-spacing:normal;hyphens:none;overflow-wrap:normal;width:100%;max-width:none;margin:0;line-height:1.6}
+.features-section .feature-card h3{text-align:left}
+.signup-frame{display:block;width:100%;border:0;background:#090d1a;color-scheme:dark}
+.cta-box .mailerlite-signup{max-width:440px;margin-top:24px}
+@media(max-width:700px){
+ :root{--section-title-size:clamp(34px,9vw,46px)}
+ .hero-copy h1,.features-section .section-intro h2,.courses-section .section-intro h2,.how-section .how-right h2,.cta-box h2{letter-spacing:-1.2px}
+ .hero-note{justify-content:center;text-align:center;width:100%}
+ .how-section .how-grid{grid-template-columns:1fr}
+ .features-section .feature-card h3{font-size:20px}
+ .features-section .feature-card p{font-size:14px}
+}
+
+/* Mobile signup heading matches the Everything You Need section. */
+@media(max-width:700px){
+ .cta-box h2{font-size:var(--section-title-size);line-height:1.12;letter-spacing:-1.2px;margin:18px auto;text-wrap:balance}
+ .cta-box h2 span{background:linear-gradient(100deg,#a882ff,#65a6ff 58%,#6ae2db);color:transparent;background-clip:text;-webkit-background-clip:text}
+}
+
+/* Mobile spacing, natural text, and content-safe square cards. */
+@media(max-width:700px){
+ .hero-desc,.features-section .section-intro p,.courses-section .section-intro p,.how-section .how-right>p,.cta-box>p{width:min(100%,var(--intro-width,100%));max-width:none;margin-left:auto;margin-right:auto;text-align:left;word-spacing:normal;hyphens:none}
+ .hero-desc{margin-left:0}
+ .features-section .feature-card,.courses-section .modern-course{aspect-ratio:1;min-height:min-content;height:auto;padding:16px 12px}
+ .features-section .feature-card h3{font-size:18px;line-height:1.2;margin-bottom:10px}
+ .features-section .feature-card p{font-size:13px;line-height:1.45;text-align:left;word-spacing:normal}
+ .features-section .mini-lines{display:block;width:100%;max-width:100%;flex-shrink:0;margin:16px 0 0}
+ .features-section .mini-lines span{display:block;height:6px;min-height:6px;margin-bottom:7px}
+ .features-section .mini-bars,.features-section .answer-preview,.features-section .review-tags{margin-top:16px;flex-shrink:0}
+ .courses-section .modern-course .course-info{margin-top:12px}
+ .courses-section .modern-course .course-info h3{font-size:20px}
+ .footer-inner{gap:.3rem}
+ .footer-inner>span{line-height:1.3;margin:0}
+ footer .logo small{margin-top:.3rem;line-height:1.3}
+}
+
+/* Collected revisions: navigation, readable intros, and feature slideshow. */
+.nav-links a:hover,.nav-links a:focus-visible{color:#9f87ff}
+.nav-links .nav-cta:hover,.nav-links .nav-cta:focus-visible{background:#9f87ff;border-color:#9f87ff;color:#090d1a}
+.hero-note .avatar-stack{display:none}
+@media(min-width:701px){.hero-note{justify-content:flex-start;text-align:left}}
+.features-section .section-intro p,.courses-section .section-intro p,.how-section .how-right>p,.cta-box>p{width:100%;max-width:800px;text-align:left;word-spacing:normal;margin-left:auto;margin-right:auto}
+.feature-carousel{max-width:660px;margin:0 auto}
+.features-section .feature-slides{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.feature-slides::-webkit-scrollbar{display:none}
+.features-section .feature-slides .feature-card{flex:0 0 100%;width:100%;min-width:0;min-height:340px;height:auto;aspect-ratio:auto;scroll-snap-align:start;scroll-snap-stop:always;padding:36px;overflow:visible;display:flex;flex-direction:column;text-align:left}
+.features-section .feature-slides .feature-card h3{font-size:32px;line-height:1.2;margin-bottom:18px;text-align:left}
+.features-section .feature-slides .feature-card p{font-size:18px;line-height:1.6;text-align:left;max-width:none;margin:0}
+.features-section .feature-slides .mini-lines{display:block;width:100%;max-width:100%;margin:28px 0 0}
+.features-section .feature-slides .mini-bars{height:70px;margin-top:28px;justify-content:flex-start}
+.features-section .feature-slides .answer-preview{font-size:16px;align-items:flex-start;margin-top:28px}
+.features-section .feature-slides .review-tags{justify-content:flex-start;margin-top:28px}
+.features-section .feature-slides .review-tags span{font-size:14px;padding:10px}
+.feature-dots{display:flex;justify-content:center;gap:2px;margin-top:12px}
+.feature-dots button{display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:50%;background:transparent}
+.feature-dots button span{width:10px;height:10px;border-radius:50%;background:#56617b}
+.feature-dots button[aria-current=true] span{background:#9f87ff;transform:scale(1.25)}
+.feature-dots button:focus-visible,.feature-slides:focus-visible{outline:2px solid #9f87ff;outline-offset:2px}
+@media(max-width:700px){
+ .hero-desc,.features-section .section-intro p,.courses-section .section-intro p,.how-section .how-right>p,.cta-box>p{width:100%;max-width:none;text-align:left;word-spacing:normal;margin-left:0;margin-right:0}
+ .features-section .feature-slides .feature-card{min-height:330px;padding:26px 24px}
+ .features-section .feature-slides .feature-card h3{font-size:27px}
+ .features-section .feature-slides .feature-card p{font-size:16px;line-height:1.6}
+ .cta-box .mailerlite-signup{width:calc(100% - 32px);max-width:360px;margin:24px auto 14px}
+}
+
+/* One type scale for paragraphs immediately below section H2 headings. */
+.features-section .section-intro h2+p,
+.courses-section .section-intro h2+p,
+.how-section .how-right h2+p,
+.cta-box h2+p{font-size:18px;line-height:1.65;text-align:left;word-spacing:normal}
+@media(max-width:700px){
+ .features-section .section-intro h2+p,
+ .courses-section .section-intro h2+p,
+ .how-section .how-right h2+p,
+ .cta-box h2+p{font-size:16px;line-height:1.6;width:calc(100% - 32px);max-width:360px;margin-left:auto;margin-right:auto}
+}
+
+/* Mobile label consistency and a slightly smaller hero phone group. */
+@media(max-width:700px){
+ .how-section .how-left>.section-kicker,.cta-box>.section-kicker{font-size:15px;letter-spacing:3px;font-weight:800;line-height:1.4}
+ .hero .showcase{height:335px;transform:scale(.522)}
+}
+@media(max-width:390px){.hero .showcase{height:311px;transform:scale(.486)}}
+@media(max-width:350px){.hero .showcase{height:279px;transform:scale(.432)}}
+
+/* Compact benefit slides with illustrative app UI. */
+.feature-carousel{max-width:580px;width:100%}
+.features-section .feature-slides .feature-card{padding:26px;min-height:0;border-radius:22px}
+.features-section .feature-slides .feature-card h3{font-size:28px;margin-bottom:10px}
+.features-section .feature-slides .feature-card>p{font-size:16px;line-height:1.5}
+.benefit-preview{margin-top:20px;padding:20px;border:1px solid #344262;border-radius:16px;background:#0c1426;flex:1;min-width:0}
+.preview-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.preview-top>span{color:#bda8ff;font-size:10px;font-weight:800;letter-spacing:1px}
+.preview-top small{color:#a1adc4;font-size:10px}
+.benefit-preview h4{font-family:Outfit,sans-serif;font-size:20px;line-height:1.25;margin:0 0 10px;color:#f4f5ff}
+.features-section .feature-slides .benefit-preview p{font-size:14px;line-height:1.5;color:#b8c4d9}
+.dns-example{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0;color:#96aaff;font-size:13px}
+.dns-example>span{padding:7px 9px;background:#19243c;border-radius:7px}
+.preview-action{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:18px;padding:11px 12px;background:#55ebc8;color:#091829;border-radius:9px;font-size:13px;font-weight:800}
+.quiz-option{display:flex;align-items:center;gap:12px;border:1px solid #35415b;border-radius:9px;padding:10px 12px;margin-top:8px;font-size:14px;color:#aab8d0}
+.quiz-option span{flex:1;color:#e2e8f5}
+.quiz-option.correct{border-color:#55ebc8;background:#55ebc810;color:#55ebc8}
+.features-section .feature-slides .benefit-preview .answer-explanation{margin-top:12px;font-size:13px}
+.answer-explanation strong{color:#55ebc8}
+.progress-example{display:flex;align-items:center;gap:18px;margin:14px 0 18px}
+.benefit-ring{flex-shrink:0;width:88px;height:88px;display:grid;place-items:center;border-radius:50%;background:conic-gradient(#55ebc8 60%,#28334e 0)}
+.benefit-ring>span{display:grid;grid-auto-flow:column;align-items:center;justify-content:center;width:72px;height:72px;border-radius:50%;background:#0c1426;color:#f4f5ff;font-family:Outfit;font-size:28px;font-weight:700}
+.benefit-ring small{font-size:15px}
+.preview-checklist{padding:0;list-style:none;margin:0;display:grid;gap:10px;font-size:13px;color:#c5d0e3}
+.preview-checklist li{display:flex;align-items:center;gap:9px}
+.preview-checklist svg{color:#55ebc8}
+.next-dot{width:7px;height:7px;margin:0 4px;border-radius:50%;background:#a882ff}
+.review-example{display:flex;align-items:center;gap:14px;margin:18px 0}
+.review-count{display:grid;place-items:center;width:54px;height:58px;flex-shrink:0;border-radius:12px;background:#9f87ff22;color:#bda8ff;font-family:Outfit;font-size:34px;font-weight:700}
+.preview-topics{display:flex;flex-wrap:wrap;gap:7px}
+.preview-topics span{font-size:12px;padding:6px 9px;background:#201d3c;color:#d6c7ff;border:1px solid #49416c;border-radius:7px}
+@media(max-width:700px){
+ .feature-carousel{width:calc(100% - 16px);max-width:380px}
+ .features-section .feature-slides .feature-card{padding:20px 18px;min-height:0}
+ .features-section .feature-slides .feature-card h3{font-size:24px}
+ .features-section .feature-slides .feature-card>p{font-size:15px}
+ .benefit-preview{padding:15px;margin-top:16px}
+ .benefit-preview h4{font-size:18px}
+ .progress-example{gap:12px;flex-wrap:wrap}
+ .feature-dots{margin-top:6px}
+}
+
+/* Real app screenshots, preserving original image files. */
+.features-section .feature-slides{align-items:stretch}
+.app-preview-button{display:flex;flex-direction:column;justify-content:center;gap:12px;width:100%;flex:1;margin-top:20px;padding:0;border:0;background:transparent;color:#c8b8ff;cursor:zoom-in;font:inherit}
+.app-screenshot{display:block;position:relative;width:100%;overflow:hidden;border-radius:14px;background:#f3f6fc}
+.app-screenshot img{display:block;width:100%;height:auto;max-width:none}
+.app-preview-button .app-screenshot{max-width:280px;margin:auto}
+.app-preview-button .screenshot-paused{max-width:none}
+.screenshot-paused{aspect-ratio:1290/380}
+.screenshot-simulator{aspect-ratio:1290/1160}
+.screenshot-paused img,.screenshot-simulator img{position:absolute;left:0;width:100%;height:auto}
+.screenshot-paused img{top:0}
+.screenshot-simulator img{top:-55.172414%}
+.enlarge-hint{display:block;text-align:center;font-size:12px;line-height:1.4}
+.app-preview-button:focus-visible{outline:2px solid #9f87ff;outline-offset:5px;border-radius:14px}
+.screenshot-dialog{width:min(720px,calc(100vw - 24px));max-width:none;max-height:90dvh;margin:auto;padding:16px;border:1px solid #526080;border-radius:20px;background:#0c1426;color:#f4f5ff;overflow:auto;overscroll-behavior:contain}
+.screenshot-dialog::backdrop{background:rgba(3,7,18,.88)}
+.screenshot-dialog-header{position:sticky;top:-16px;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;background:#0c1426}
+.screenshot-dialog-header h3{margin:0;font-size:20px;line-height:1.3}
+.screenshot-dialog-header button{display:grid;place-items:center;flex-shrink:0;width:44px;height:44px;background:#24304c;border:1px solid #56617b;border-radius:50%;color:white;cursor:pointer}
+@media(max-width:700px){.app-preview-button{margin-top:16px}.app-preview-button .app-screenshot{max-width:250px}.app-preview-button .screenshot-paused{max-width:none}.screenshot-dialog-header h3{font-size:18px}}
